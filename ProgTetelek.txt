@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp46
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<int> lista = new List<int> { 22, 48, 55, 36, 87, 81, 60,12,18 };
+            Console.WriteLine("Legkisebb szám: ",Első_metódus(lista));
+            Második_metódus(lista, false);
+            Második_metódus(lista, true);
+            Console.ReadKey();
+        }
+        //KIIRATNI A LEGKISEBB SZAMOT A LISTABOL
+        static int Első_metódus(List<int> l)
+        {
+            
+            int legkisebb = l.Min();
+            return legkisebb;
+        }
+        //KIIRATNI A PAROS SZAMOKAT A LISTABOL
+        static void Második_metódus(List<int> listaa, bool Parosszam)
+        {
+            if (Parosszam)
+            {
+                Console.Write("Páros számok a listából: ");
+                foreach (int Sz in listaa)
+                {
+                    if (Sz % 2 == 0)
+                    {
+                        Console.Write(Sz + " ");
+                    }
+                }
+
+            }
+            
+            Console.WriteLine();
+        }
+    }
+}
