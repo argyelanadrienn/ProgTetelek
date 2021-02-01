@@ -1,0 +1,2 @@
+# ProgTetelek
+Progi tételes repo
